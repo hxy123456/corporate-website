@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻动态 — TechNova科技集团</title>
+  <meta name="description" content="了解TechNova最新企业新闻、行业资讯与活动公告。">
+  <meta property="og:title" content="新闻动态 — TechNova科技集团">
+  <meta property="og:description" content="TechNova最新动态与行业洞察。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">跳到主要内容</a>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="主导航">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="TechNova 首页">
+        <div class="navbar__logo-icon">T</div>
+        TechNova
+      </a>
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="navbar__link">首页</a></li>
+        <li><a href="about.html" class="navbar__link">关于我们</a></li>
+        <li><a href="products.html" class="navbar__link">产品服务</a></li>
+        <li><a href="news.html" class="navbar__link active">新闻动态</a></li>
+        <li><a href="contact.html" class="navbar__link">联系我们</a></li>
+        <li><a href="careers.html" class="navbar__link">加入我们</a></li>
+      </ul>
+      <div class="navbar__hamburger" aria-label="打开菜单" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="navbar__overlay"></div>
+    <div class="navbar__mobile-menu">
+      <a href="index.html" class="navbar__link">首页</a>
+      <a href="about.html" class="navbar__link">关于我们</a>
+      <a href="products.html" class="navbar__link">产品服务</a>
+      <a href="news.html" class="navbar__link active">新闻动态</a>
+      <a href="contact.html" class="navbar__link">联系我们</a>
+      <a href="careers.html" class="navbar__link">加入我们</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>新闻动态</h1>
+        <p>了解 TechNova 最新动态与行业洞察</p>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="container">
+        <!-- Search -->
+        <div class="search-box reveal">
+          <input type="search" class="search-box__input" placeholder="搜索新闻..." aria-label="搜索新闻" id="news-search">
+          <button class="search-box__btn" onclick="searchNews()">搜索</button>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-tabs reveal" role="tablist" aria-label="新闻分类">
+          <button class="filter-tab active" role="tab" data-filter="all">全部</button>
+          <button class="filter-tab" role="tab" data-filter="company">企业新闻</button>
+          <button class="filter-tab" role="tab" data-filter="industry">行业资讯</button>
+          <button class="filter-tab" role="tab" data-filter="event">活动公告</button>
+        </div>
+
+        <!-- News List -->
+        <div id="news-list">
+          <div class="news-card reveal" data-category="company">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年4月15日 · 企业新闻</div>
+              <h3 class="news-card__title">TechNova Cloud 3.0 正式发布：全新架构带来10倍性能提升</h3>
+              <p class="news-card__excerpt">全新微服务架构与智能调度引擎，为企业客户提供更高效、更稳定的云服务体验。TechNova Cloud 3.0在计算性能、存储效率、网络吞吐三大维度实现突破性提升...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(0); return false;">阅读全文 →</a>
+            </div>
+          </div>
+
+          <div class="news-card reveal" data-category="company">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年4月8日 · 企业新闻</div>
+              <h3 class="news-card__title">TechNova 获评"2026年度最具创新力科技企业"称号</h3>
+              <p class="news-card__excerpt">在第十届中国科技创新大会上，TechNova凭借在AI与云计算领域的持续创新，荣获"年度最具创新力科技企业"称号...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(1); return false;">阅读全文 →</a>
+            </div>
+          </div>
+
+          <div class="news-card reveal" data-category="industry">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年3月28日 · 行业资讯</div>
+              <h3 class="news-card__title">2026年企业数字化转型趋势报告：AI与云原生成为核心驱动力</h3>
+              <p class="news-card__excerpt">TechNova研究院发布年度趋势报告，指出AI大模型与云原生架构将成为企业数字化转型的两大核心驱动力...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(2); return false;">阅读全文 →</a>
+            </div>
+          </div>
+
+          <div class="news-card reveal" data-category="event">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年3月20日 · 活动公告</div>
+              <h3 class="news-card__title">TechNova 2026技术开放日：邀您共探AI与云原生前沿</h3>
+              <p class="news-card__excerpt">TechNova将于4月25日在北京举办年度技术开放日，邀请行业专家与客户共同探讨AI与云原生技术的最新进展与应用实践...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(3); return false;">阅读全文 →</a>
+            </div>
+          </div>
+
+          <div class="news-card reveal" data-category="company">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年3月10日 · 企业新闻</div>
+              <h3 class="news-card__title">TechNova与华为云达成战略合作，共建混合云生态</h3>
+              <p class="news-card__excerpt">TechNova科技集团与华为云签署战略合作协议，双方将在混合云架构、AI平台、数据智能等领域展开深度合作...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(4); return false;">阅读全文 →</a>
+            </div>
+          </div>
+
+          <div class="news-card reveal" data-category="industry">
+            <div class="news-card__img">新闻图片</div>
+            <div class="news-card__body">
+              <div class="news-card__date">2026年2月25日 · 行业资讯</div>
+              <h3 class="news-card__title">边缘计算市场规模预计2028年突破千亿，TechNova提前布局</h3>
+              <p class="news-card__excerpt">据IDC最新报告预测，全球边缘计算市场规模将在2028年突破千亿元。TechNova凭借SmartIoT平台已提前完成战略布局...</p>
+              <a href="#" class="product-card__link" onclick="openNewsDetail(5); return false;">阅读全文 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination reveal">
+          <button class="pagination__btn" aria-label="上一页">‹</button>
+          <button class="pagination__btn active">1</button>
+          <button class="pagination__btn">2</button>
+          <button class="pagination__btn">3</button>
+          <button class="pagination__btn" aria-label="下一页">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title" class="reveal">关注 TechNova，获取最新动态</h2>
+        <p class="reveal">订阅我们的新闻通讯，第一时间获取行业洞察与产品更新</p>
+        <div class="reveal">
+          <a href="contact.html" class="btn btn--accent btn--lg">订阅资讯 →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- News Detail Modal -->
+  <div class="modal-overlay" id="news-detail-modal">
+    <div class="modal" role="dialog" aria-label="新闻详情">
+      <button class="modal__close" onclick="closeModal('news-detail-modal')" aria-label="关闭">✕</button>
+      <div id="news-detail-content"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">TechNova</div>
+          <p class="footer__brand-desc">TechNova科技集团，专注于企业数字化转型与智能解决方案，以技术创新驱动商业未来。</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="微信">微</a>
+            <a href="#" class="footer__social-link" aria-label="微博">博</a>
+            <a href="#" class="footer__social-link" aria-label="抖音">抖</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">快速导航</div>
+          <ul class="footer__links">
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="products.html">产品服务</a></li>
+            <li><a href="news.html">新闻动态</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="careers.html">加入我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">产品服务</div>
+          <ul class="footer__links">
+            <li><a href="products.html">TechNova Cloud</a></li>
+            <li><a href="products.html">TechNova AI</a></li>
+            <li><a href="products.html">DataInsight</a></li>
+            <li><a href="products.html">SmartIoT</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">联系方式</div>
+          <div class="footer__contact-item">📞 400-888-9999</div>
+          <div class="footer__contact-item">✉ contact@technova.cn</div>
+          <div class="footer__contact-item">📍 北京市海淀区中关村科技园</div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        © 2026 TechNova科技集团 版权所有 | 京ICP备20260001号
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
